@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ktpl_Catalog>
+            <version>0.1.0</version>
+        </Ktpl_Catalog>
+    </modules>
+    <global>
+        <blocks>
+            <class>Ktpl_Catalog_Block</class>
+             <page>
+                <rewrite>
+                    <html_topmenu>Ktpl_Catalog_Block_Html_Topmenu</html_topmenu>
+                </rewrite>
+             </page>
+        </blocks>
+       <cache>
+            <types>
+                <menu_loading>
+                    <label>Menu Loading</label>
+                    <description>Cache of Menu loading.</description>
+                    <tags>menu_cache</tags>
+                </menu_loading>
+            </types>
+        </cache>
+        <events>
+            <adminhtml_cache_refresh_type>
+                <observers>
+                    <module_alias>
+                        <class>Ktpl_Catalog_Model_Observer</class>
+                        <type>singleton</type>
+                        <method>cleanCacheType</method>
+                    </module_alias>
+                 </observers>
+             </adminhtml_cache_refresh_type>
+        </events>
+    </global>
+</config>
