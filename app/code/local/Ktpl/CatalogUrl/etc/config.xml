@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ktpl_CatalogUrl>
+            <version>0.1.0</version>
+        </Ktpl_CatalogUrl>
+    </modules>
+    <global>
+       <models>
+          <catalog>
+              <rewrite>
+                  <url>Ktpl_CatalogUrl_Model_Url</url>
+              </rewrite>
+          </catalog>
+       </models>
+    </global>
+</config>
